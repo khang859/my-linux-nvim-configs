@@ -7,8 +7,18 @@ return {
     "MunifTanjim/nui.nvim",
   },
   config = function()
-    vim.keymap.set('n', '<C-n>', ':Neotree toggle<CR>')
-    vim.keymap.set('n', '<C-h>', '<C-w>h')
-    vim.keymap.set('n', '<C-l>', '<C-w>l')
-  end
+    require("neo-tree").setup({
+      filesystem = {
+        filtered_items = {
+          visible = true,
+          hide_dotfiles = false,
+          hide_gitignored = true,
+        },
+      },
+    })
+
+    vim.keymap.set("n", "<C-n>", ":Neotree toggle<CR>")
+    vim.keymap.set("n", "<C-h>", "<C-w>h")
+    vim.keymap.set("n", "<C-l>", "<C-w>l")
+  end,
 }

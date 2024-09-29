@@ -9,7 +9,14 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "ts_ls", "terraformls", "cssls" },
+        ensure_installed = { "lua_ls", "ts_ls", "tsserver", "terraformls", "cssls" },
+        handlers = {
+          function (server_name)
+            if (server_name) == "tsserver" then
+              server_name = "ts_ls"
+            end
+          end
+        }
       })
     end,
   },
@@ -22,8 +29,13 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
       })
-      lspconfig.ts_ls.setup({
+      lspconfig.tsserver.setup({
         capabilities = capabilities,
+        filetypes = {
+          "mjs",
+          "javascript"
+        }
+
       })
       lspconfig.terraformls.setup({
         capabilities = capabilities,

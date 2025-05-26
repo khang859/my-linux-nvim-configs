@@ -15,3 +15,4 @@ require("lazy").setup({
     spec = "khang.lazy",
     change_detection = { notify = false }
 })
+

@@ -1,4 +1,4 @@
-vim.cmd.colorscheme("catppuccin-mocha")
+vim.cmd.colorscheme("kanagawa")
  
 vim.opt.clipboard = 'unnamedplus' -- use system keyboard for yank
  

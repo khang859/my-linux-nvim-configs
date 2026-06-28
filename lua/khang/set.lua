@@ -1,5 +1,5 @@
-vim.cmd.colorscheme("kanagawa")
- 
+-- colorscheme is applied in lua/khang/lazy/kanagawa_theme.lua (after the plugin loads)
+
 vim.opt.clipboard = 'unnamedplus' -- use system keyboard for yank
  
 vim.opt.nu = true                 -- set line numbers -- set line numbers
@@ -12,7 +12,9 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
  
-vim.opt.wrap = false
+vim.opt.wrap = true       -- wrap long lines
+vim.opt.linebreak = true  -- wrap at word boundaries, not mid-word
+vim.opt.breakindent = true -- keep wrapped lines visually indented
  
 vim.opt.incsearch = true -- incremental search
  

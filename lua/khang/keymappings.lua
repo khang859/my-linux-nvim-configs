@@ -7,5 +7,5 @@
 -- vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
 vim.keymap.set('n', "<C-n>", ":Neotree toggle<CR>")
-vim.keymap.set('n', "<C-h>", ":<C-w>h")
-vim.keymap.set('n', "<C-l>", ":<C-w>l")
+vim.keymap.set('n', "<C-h>", "<C-w>h", { desc = "Move to left window" })
+vim.keymap.set('n', "<C-l>", "<C-w>l", { desc = "Move to right window" })

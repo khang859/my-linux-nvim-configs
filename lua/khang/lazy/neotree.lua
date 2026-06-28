@@ -6,7 +6,7 @@ return {
     "nvim-tree/nvim-web-devicons",
     "MunifTanjim/nui.nvim",
   },
-  lazy = false,
+  cmd = "Neotree", -- lazy-load when the :Neotree command runs (e.g. <C-n>)
   opts = {
     rocks = {
       hererocks = {
